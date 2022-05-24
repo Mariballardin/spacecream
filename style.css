@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-h1: 'Staatliches', sans-serif;
+  --font-text: 'Roboto', sans-serif;
+  --font-footer: 'Open Sans', sans-serif;
+  --font-p: 'Palanquin', sans-serif;
+  --background-one: hsl(218, 17%, 62%);
+  --background-two: #ffffff;
+  --background3: hsl(233, 100%, 97%);
+  --color-box:hsl(275, 18%, 79%);
+  --color-text-footer: hsl(232, 17%, 35%);
+  --color-text-p: hsl(274, 84%, 12%);
+  --bg-title-sm: hsl(312, 91%, 96%);
+  font-size: 62.5%;
+  --fs-body: 1.6rem;
+ 
+  /* --fs-heading: clamp(4rem, 1rem + 6vw, 5.6rem);
+  --fs-heading-sm: clamp(3rem, 0.5rem + 3vw, 4rem); */
+
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+body {
+  background: var(--background3);
+  width: 100vw;
+  min-height: 100vh;
+  
+}
+
+
+/* header img {
+  text-align: center;
+  margin: 3.2rem auto;
+  width: 30%;
+  display: block;
+  
+} */
+
+ main img {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+
+header {
+  width: 100%;
+  height: 27.9rem;
+  background: var(--background-one);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3.2rem 0 2.9rem 0;
+  justify-content: space-between;
+  
+ 
+}
+
+header .logo {
+  width: 13.7rem;
+  height: 13.7rem;
+}
+
+header .title-container {
+ 
+  width: 100%;
+  height: 4.9rem;
+  
+  background: var(--color-box);
+  padding: 0.8rem 0;
+
+}
+
+header h1 {
+  
+  font-family: var(--font-h1);
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+/* 
+  text-align: center; */
+  font-weight: 400;
+  font-size: 4.0rem;
+  line-height: 3.4rem;
+  text-transform: uppercase;
+
+}
+
+
+
+/* .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; */
+
+/* main {
+  background-color: var(--background3);
+ 
+  padding-bottom: 6rem; */
+ 
+  /* display: grid;
+  grid-template-areas: "A B C D";
+  grid-template-columns: 1fr 1fr 1fr 1fr; */
+
+  /* isso que ajustou as imagens
+    */
+  main {
+    padding: 0 3.2rem;
+    margin: 0 auto;
+  
+  } 
+
+.text {
+  font-family: var(--font-p);
+  font-weight: 400;
+  line-height: 3rem;
+
+  font-size: 2rem;
+  padding: 1.4rem 3.6rem 0;
+  margin-bottom: 6.3rem;
+  text-align: center;
+  color: var(--color-text-p);
+  
+}
+
+main {
+  padding: 0 3.2rem;
+  margin: 0 auto;
+
+}
+
+
+/* .card {
+  position: relative;
+  bottom: 5.2rem;
+  left: 5.8rem;
+} */
+
+main .cards {
+  display: grid;
+  gap: 3.6rem;
+  margin-bottom: 6rem;
+
+}
+
+main .card {
+
+  position: relative;
+  height: fit-content;
+  animation: downtop 700ms 350ms backwards;
+}
+/* .card img {
+  /* width: 70%;
+  height: auto; 
+  
+  height: 41.6rem;
+  object-fit: cover;
+
+  border-radius: 3.6rem;
+
+  transition: all 200ms;
+  /* all para editar a opacidade e a transição do tamanho, senao seria 'transition:transform 200ms' 
+
+} */
+
+main .card img {
+  transition: all 200ms;
+  border-radius: 3rem;
+
+}
+
+.card img:hover {
+  transform: scale(1.1);
+  
+}
+
+h2 {
+  letter-spacing: 0.05em;
+
+  font-size: 2rem;
+  font-weight: 400;
+  
+  font-family: var(--font-h1);
+  color: var(--color-text-footer);
+  text-transform: uppercase;
+}
+main .card h2 {
+  background: var(--bg-title-sm);
+  width: 12.2rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+
+  
+  
+ 
+}
+
+/* 
+.card h2 span {
+  position: absolute;
+  bottom: 5.2rem;
+  right: 1.4rem;
+
+  font-size: 2rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+  color: var(--tree-color);
+  font-weight: 400;
+  padding: 0 1.6rem;
+
+  width: fit-content;
+  height: 3.8rem;
+
+  display: inline-flex;
+  align-items:;
+
+} */
+footer {
+  display: none;
+}
+
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* 
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */
+
+@media (min-width: 900px) { 
+
+  .page {
+  display: grid;
+  grid-template-columns: 37.5rem 1fr;
+  grid-template-rows: 27.9rem 1fr;
+  grid-template-areas:
+    "header content" 
+    "sidebar content"
+    "sidebar footer";
+    min-height: 100vh;
+  }
+
+  header {
+    grid-area: header;
+  }
+
+  .text {
+    grid-area: sidebar;
+    background: var(--background-one);
+    min-height: 100vh;
+    margin-bottom: 0;
+    color: white;
+  }
+
+  main {
+    grid-area: content;
+    width: 90%;
+    min-height: 100vh;
+    padding-top: 6.4rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main .cards {
+    grid-template-areas: "A B"
+                         "D B"
+                         "D F"
+                         "C E";
+ 
+  }
+  .cards .card:nth-child(1) {
+    grid-area: A;
+  }
+  .cards .card:nth-child(2) {
+    grid-area: B;
+   }
+   .cards .card:nth-child(3) {
+     grid-area: C;
+   }
+   .cards .card:nth-child(4) {
+     grid-area: D;
+   }
+   .cards .card:nth-child(5) {
+     grid-area: F;
+   }
+   .cards .card:nth-child(6) {
+     grid-area: E;
+ }
+ 
+   main .card h2 {
+     display: none;
+   }
+ 
+   footer {
+     grid-area: footer;
+     display: block;
+     color: #4A4E69;
+     text-align: center;
+     padding-bottom: 4.6rem;
+     font-size: 1.4rem;
+     line-height: 2.8rem;
+     font-family: var(--font-text);
+   }
+
+   footer a {
+     
+    text-decoration:none;
+    color: #4A4E69;
+
+   }
+   footer a:hover {
+     cursor: pointer;
+ 
+   }
+}
+
+@media (min-width: 1440px) {
+  main .cards {
+    grid-template-areas: "A B C"
+                         "D B E"
+                         "D F E";
+  }
+
+  .cards .card:nth-child(1) {
+    grid-area: A;
+
+  }
+  .cards .card:nth-child(2) {
+    grid-area: B;
+   }
+   .cards .card:nth-child(3) {
+     grid-area: C;
+   }
+   .cards .card:nth-child(4) {
+     grid-area: D;
+   }
+   .cards .card:nth-child(5) {
+     grid-area: F;
+   }
+   .cards .card:nth-child(6) {
+     grid-area: E;
+ }
+}
